@@ -7,6 +7,7 @@ import {
   TextInput 
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import AppBtn from '../AppBtn'
 
 export default class SignIn extends Component {
 
@@ -54,8 +55,9 @@ export default class SignIn extends Component {
                 </View>
 
 
-                <View style={styles.ending}></View>
-
+                <View style={styles.ending}>
+                    <AppBtn title="Sign In" />
+                </View>
             </View>
         )
     }
@@ -118,7 +120,9 @@ const styles = StyleSheet.create({
         },
 
          ending: {
-            flex: 1
+            flex: 1,
+            justifyContent:'center',
+            alignItems: 'center'
         },
 
 

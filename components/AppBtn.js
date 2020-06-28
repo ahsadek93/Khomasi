@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Button
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default class AppBtn extends Component {
@@ -14,6 +15,7 @@ export default class AppBtn extends Component {
             <AppButton
             title={this.props.title}
             onPress={this.props.onPress}
+            name={this.props.name}
             />
         )
     }
@@ -23,26 +25,30 @@ export default class AppBtn extends Component {
 }
 
 
-const AppButton = ({ onPress, title }) => (
+const AppButton = ({ onPress, title, name }) => (
   <TouchableOpacity onPress={onPress} style={styles.appButtonContainer}>
+    <Icon name={name} size={20} color="#fff" />
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
 const styles = StyleSheet.create({
-  // ...
   appButtonContainer: {
-    elevation: 8,
+    flexDirection: 'row',
+    justifyContent:'center',
+    alignItems:'center',
+    elevation: 1,
     backgroundColor: "#64E574",
-    borderRadius: 10,
+    borderRadius: 25,
     paddingVertical: 15,
-    paddingHorizontal: 100
+    paddingHorizontal: 60,
+    
   },
   appButtonText: {
-    fontSize: 18,
+    fontSize: 20,
     color: "#fff",
     fontWeight: "bold",
-    alignSelf: "center",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    paddingHorizontal: 5,
   }
 });
