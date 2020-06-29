@@ -10,6 +10,8 @@ import Loading from './components/Loading'
 import LoadingScreen from './components/pages/LoadingScreen'
 import SignIn from './components/pages/SignIn'
 import Register from './components/pages/Register'
+import PlacePicker from './components/pages/PlacePicker'
+
 
 
 
@@ -30,7 +32,7 @@ constructor(){
     render(){
         if (this.state.loaded){
             return (
-                <Register />
+                <PlacePicker />
             ) 
         } else {
             return(
